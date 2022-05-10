@@ -1,2 +1,2 @@
 # RM-Depth
-RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes
+This repository (https://github.com/twhui/RM-Depth) provides the offical release of the code package for my paper "RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes" published in CVPR 2022. 
