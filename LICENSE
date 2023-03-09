@@ -10,7 +10,8 @@ When using any parts of the Software or the Paper in your work, please cite the 
  author = {Tak-Wai Hui},
  title = {RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes},
  booktitle = {Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
- year = {2022},
+ pages = {1675--1684},
+ year = {2022}
 }
 
 The above copyright notice and this permission notice shall be included in all copies or substantial 
