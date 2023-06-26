@@ -1,5 +1,5 @@
 # RM-Depth
-This repository (https://github.com/twhui/RM-Depth) is the offical project page for my paper <a href="https://arxiv.org/pdf/2303.04456.pdf"><strong>RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes</strong></a> published in CVPR 2022. <i>The up-to-date version of the paper is available on <a href="https://arxiv.org/pdf/2303.04456.pdf"><strong>arXiv</strong></a></i>. 
+This repository (https://github.com/twhui/RM-Depth) is the offical project page for my paper <a href="https://arxiv.org/pdf/2303.04456.pdf"><strong>RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes</strong></a> published in CVPR 2022. <i>The up-to-date version of the paper is available on <a href="https://arxiv.org/pdf/2303.04456.pdf"><strong>arXiv</strong></a></i>. The supplementary material is available on <a href="https://github.com/twhui/RM-Depth/blob/main/Supplementary%20Material%20for%20RM-Depth%20Unsupervised%20Learning%20of%20Recurrent%20Monocular%20Depth%20in%20Dynamic%20Scenes_CVPR22.pdf"><strong>here</strong></a></i>.
 
 <a href="https://www.youtube.com/watch?v=0r4Je86w1Cg">
 <p align="center"><img src="./figures/demo video thumbnail.png" width="600" /></p>
@@ -7,10 +7,15 @@ This repository (https://github.com/twhui/RM-Depth) is the offical project page 
 
 # Overview
 <p align="center"><img src="./figures/RM-Depth.png" width="700" /></p>
-RM-Depth is proposed for unsupervised joint learning of single-image depth map, ego-motion, and object motion in general scenes. Optical flow can also be recovered by explicit computation. The depth network utilizes Recurrent Modulation Units (RMU) to adaptively and iteratively combine encoder and decoder features. Residual upsampling is used to facilitate the learning of edge-aware filters. The motion network estimates a 3D motion field of moving objects. This breaks down the scene rigidity assumption and allows to use general videos for the unsupervised learning. The proposed innovations lead to the improved depth accuracy despite not using any segmentation labels.
+A new unsupervised CNN is proposed to predict single-image depth map and complete 3D motion (motions of moving objects and camera itself) in dynamic scenes without requiring scene rigidity and semantic labels. Optical flow and moving object segementations are also recovered. 
+<br><br>
+Major contributions: (1) Recurrent modulation units (RMU) are proposed to adaptively and iteratively combine encoder and decoder features. (2) Residual upsampling is proposed for fast and efficient resizing of feature maps while sharp depth can be resulted. (3) A warping-based network is proposed to estimate a motion field of moving objects without using semantic priors. The motion field is further regularized by an outlier-aware training loss. 
+<br><br>
+Despite the depth model just uses a single image in test time and 2.97M parameters, it achieves state-of-the-art results on the KITTI and Cityscapes benchmarks (AbsRel = 0.107 and 0.090, respectively). Besides, It can run at 40FPS (image size: 640 x 192) on a NVIDIA 1080 GPU.
 
 # Recurrent Modulation Unit (RMU)
 <p align="center"><img src="./figures/RMU.png" width="400" /></p>
+
 Fusion of feature maps across encoder and decoder often appears in depth estimation. In RM-Depth, the depth decoder consists of RMUs. The fusion is iteratively refined by adaptive modulating the encoder features using the hidden state of RMU. This in turn improves the performance of single-image depth inference.
 
 # Residual upsampling
@@ -66,10 +71,17 @@ Besides camera motion, a 3D motion field of moving objects is recovered in a coa
 <td align="center"><strong>0.090</strong> (<a href="https://www.dropbox.com/s/yc6xxfgkoay1svs/RM-Depth_CS_predictions.rar?dl=0">predictions</a>)</td>
 <td align="center"><strong>2.97</strong></td>
 </tr>    
+<tr>
+<td align="center"><strong>RM-Depth (CVPR22),<BR> 1024 x 320</strong></td>
+<td align="center"></td> 
+<td align="center"><strong>0.106</strong> (<a href="https://www.dropbox.com/s/2qrqx3rtgaqj3r3/RM-Depth_K_predictions_1024x320.rar?dl=0">predictions</a>)<strong></td>
+<td align="center"><strong>0.088</strong> (<a href="https://www.dropbox.com/s/7zwwp1w3gbs6091/RM-Depth_CS_predictions_1024x320.rar?dl=0">predictions</a>)</td>
+<td align="center"><strong>2.97</strong></td>
+</tr>
 </tbody></table>
 
 # Code Package
-Please contact Dr. T.-W. Hui (e-mail provided in the first page of the paper) for research or commerical collaborations.
+Please contact Dr. T.-W. Hui (e-mail provided in the first page of the paper) for academic research or commerical collaborations.
 
 # License and Citation
 This software and associated documentation files (the "Software"), and the research paper (<i>RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes</i>) including but not limited to the figures, and tables (the "Paper") are provided for academic research purposes only and without any warranty. Any commercial use requires my consent. When using any parts of the Software or the Paper in your work, please cite the following paper:
