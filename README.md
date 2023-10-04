@@ -1,4 +1,7 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rm-depth-unsupervised-learning-of-recurrent-1/monocular-depth-estimation-on-cityscapes)](https://paperswithcode.com/sota/monocular-depth-estimation-on-cityscapes?p=rm-depth-unsupervised-learning-of-recurrent-1)
+
 # RM-Depth
+
 This repository (https://github.com/twhui/RM-Depth) is the offical project page for my paper <a href="https://arxiv.org/pdf/2303.04456.pdf"><strong>RM-Depth: Unsupervised Learning of Recurrent Monocular Depth in Dynamic Scenes</strong></a> published in CVPR 2022. <i>The up-to-date version of the paper is available on <a href="https://arxiv.org/pdf/2303.04456.pdf"><strong>arXiv</strong></a></i>. The supplementary material is available <a href="https://github.com/twhui/RM-Depth/blob/main/Supplementary%20Material%20for%20RM-Depth%20Unsupervised%20Learning%20of%20Recurrent%20Monocular%20Depth%20in%20Dynamic%20Scenes_CVPR22.pdf"><strong>here</strong></a></i>.
 
 <a href="https://www.youtube.com/watch?v=0r4Je86w1Cg">
