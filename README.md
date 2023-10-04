@@ -1,4 +1,4 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rm-depth-unsupervised-learning-of-recurrent-1/monocular-depth-estimation-on-cityscapes)](https://paperswithcode.com/sota/monocular-depth-estimation-on-cityscapes?p=rm-depth-unsupervised-learning-of-recurrent-1)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rm-depth-unsupervised-learning-of-recurrent-1/unsupervised-monocular-depth-estimation-on)](https://paperswithcode.com/sota/unsupervised-monocular-depth-estimation-on?p=rm-depth-unsupervised-learning-of-recurrent-1)
 
 # RM-Depth
 
